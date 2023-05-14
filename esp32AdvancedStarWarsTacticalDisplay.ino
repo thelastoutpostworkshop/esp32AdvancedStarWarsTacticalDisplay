@@ -1,11 +1,10 @@
 //
-// Code to show a Star Wars Tactical Display on a mini Oled with Arduino
+// ESP32 Advanced Star Wars Tactical Display on a round mini Oled 
 //
-// Tutorial : https://youtu.be/HzHRJd7rihE
+// Tutorial : 
 //
 
 #include <TFT_eSPI.h>
-
 #include "Aurebesh8pt7b.h"
 
 // Initialize the display
@@ -117,6 +116,7 @@ void setup()
 
   tft.setFreeFont(&Aurebesh8pt7b);
   tft.setTextSize(1);
+  tft.setRotation(2);
   tft.begin();
   clearScreen();
   tft.setRotation(0);
