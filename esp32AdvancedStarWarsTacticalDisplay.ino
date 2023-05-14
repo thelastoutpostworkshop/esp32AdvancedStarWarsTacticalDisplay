@@ -114,12 +114,11 @@ void setup()
 {
   Serial.begin(115200);
 
+  tft.begin();
   tft.setFreeFont(&Aurebesh8pt7b);
   tft.setTextSize(1);
   tft.setRotation(2);
-  tft.begin();
   clearScreen();
-  tft.setRotation(0);
 
   bootTacticalDisplay();
 }
