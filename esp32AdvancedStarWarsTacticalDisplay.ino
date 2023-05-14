@@ -12,6 +12,7 @@ TFT_eSPI tft = TFT_eSPI();
 
 // Colors
 #define COLOR_TACTICAL_BLUE 0x004aff
+#define COLOR_BACKGROUND    0x00
 #define GC9A01A_BLACK 0x0000       ///<   0,   0,   0
 #define GC9A01A_NAVY 0x000F        ///<   0,   0, 123
 #define GC9A01A_DARKGREEN 0x03E0   ///<   0, 125,   0
@@ -344,13 +345,13 @@ void drawCircleCentered(int r, boolean filled, int increaseWidth, uint16_t color
 {
   if (filled)
   {
-    tft.fillCircle(CENTER, CENTER, r, color);
+    tft.fillSmoothCircle(CENTER, CENTER, r, color,COLOR_BACKGROUND);
   }
   else
   {
     for (int i = -increaseWidth; i <= increaseWidth; i++)
     {
-      tft.drawCircle(CENTER, CENTER, r + i, color);
+      tft.drawSmoothCircle(CENTER, CENTER, r + i, color,COLOR_BACKGROUND);
     }
   }
 }
