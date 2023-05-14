@@ -351,7 +351,7 @@ void drawCircleCentered(int r, boolean filled, int increaseWidth, uint16_t color
   {
     for (int i = -increaseWidth; i <= increaseWidth; i++)
     {
-      tft.drawSmoothCircle(CENTER, CENTER, r + i, color,COLOR_BACKGROUND);
+      tft.drawCircle(CENTER, CENTER, r + i, color);
     }
   }
 }
